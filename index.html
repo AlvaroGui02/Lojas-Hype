@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Lojas Hype</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site construído pelo aluno Álvaro Guilherme">
+    <meta name="keywords" content="Tênis, casacos, estilo e moda.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/logo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="plugins/jquery.bxslider.css">
+    <link rel="stylesheet" href="plugins/magnific-popup.css">
+    <script src="plugins/jquery.min.js"></script>
+    <script src="plugins/jquery.bxslider.min.js"></script>
+    <script src="plugins/jquery.magnific-popup.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('.slider').bxSlider({
+            mode: 'horizontal',
+            auto: true,
+            pager: true,
+        });
+
+        $('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, 
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+    });
+    </script>
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <div class="container">
+            <img src="imagens/logo.jpg" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#" class="icon-suitcase">Tênis</a>
+                        <ul>
+                            <li><a href="internas/tenis_masculinos.html">Masculino</a></li>
+                            <li><a href="internas/tenis_femininos.html">Feminino</a></li>
+                        </ul>
+                    <li><a href="#" class="icon-suitcase">Moletom</a>
+                            <ul>
+                                <li><a href="internas/moletom_masculino.html">Masculino</a></li>
+                                <li><a href="internas/moletom_feminino.html">Feminino</a></li>
+                            </ul>
+                    <li><a href="internas/acessorios.html">Acessórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banners">
+        <div class="container">
+            <ul class="slider">
+                <li><img src="imagens/banners/1.png"></li>
+                <li><img src="imagens/banners/3.png"></li>
+                <li><img src="imagens/banners/2.png"></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="fotos">
+        <div class="container">
+            <h2 class="titulo-secao">Estilos</h2>
+            <div id="galeria-fotos">
+                <a href="imagens/fotos/fotosg/1.jpeg" title="Foto 01"><img src="imagens/fotos/fotosp/1.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/2.jpeg" title="Foto 02"><img src="imagens/fotos/fotosp/2.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/3.jpeg" title="Foto 03"><img src="imagens/fotos/fotosp/3.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/4.jpeg" title="Foto 04"><img src="imagens/fotos/fotosp/4.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/5.jpeg" title="Foto 05"><img src="imagens/fotos/fotosp/5.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/6.jpeg" title="Foto 06"><img src="imagens/fotos/fotosp/6.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/7.jpeg" title="Foto 07"><img src="imagens/fotos/fotosp/7.jpeg" alt=""></a>
+                <a href="imagens/fotos/fotosg/8.jpeg" title="Foto 08"><img src="imagens/fotos/fotosp/8.jpeg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="rodape">
+        <p>Site do aluno: Álvaro Guilherme Berreto dos Santos - 1º Período - Sistemas de Informação.</p>
+        <p>Instituição: <a href="http://www.unirios.edu.br">UniRios - Centro Universitário do Rio São Francisco</a></p>
+        <a href="https://instagram.com/alvarogui?igshid=YmMyMTA2M2Y=" class="icon-instagram redes"></a> <a href="https://twitter.com/alvaro02gui?t=UxBuxnIj78sIuN43vDuqRg&s=09" class="icon-twitter redes"></a>
+    </footer>
+
+</body>
+
+</html>

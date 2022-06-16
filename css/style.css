@@ -1,0 +1,181 @@
+@import url(icons/css/fontello.css);
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --color-1:#0071e3;
+    --color-2:#000;
+    --color-3:rgba(153, 153, 153, 0.39); 
+    --color-4:#fff; 
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#cabecalho{
+    background-color: rgba(0, 0, 0, 0.774);     
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#cabecalho .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho .container li ul {
+	background-color: rgba(0, 0, 0, 0.774);
+	width: 130px;
+	display: none;
+	position: absolute;
+}
+#cabecalho .container li a {
+	color: #FFF;
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+	transition: all 0.3s linear;
+}
+#cabecalho .container li a::before {
+	font-size: 24px;
+	margin-right: 10px;
+}
+#cabecalho .container li a:hover {
+	background-color: var(--color-1);
+}
+#cabecalho .container li:hover ul{
+    display: block;
+}
+#cabecalho .container li ul li{
+    display: block;
+}
+#cabecalho .container li ul li a {
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+#cabecalho .container li ul li a:hover {
+	background-color: var(--color-1);
+}
+
+#cabecalho #logo{
+    width: 60px;
+}
+#cabecalho nav li{
+    display: inline-block;
+}
+#cabecalho nav li a{
+    text-decoration: none;
+    color: var(--color-4);
+    display: block;
+    padding:15px 30px;
+    transition: all 0.5;
+}
+#cabecalho nav li a:hover{
+    background-color: rgb(13, 126, 255);
+    color: var(--color-4);
+}
+.titulo-secao{
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#versoes{      
+    padding: 70px 0;
+}
+#versoes #modelos{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 50px;
+    align-items: center;
+}
+#versoes #modelos img{
+    display: block;
+    max-width: 100%;
+    max-height: 250px;
+    margin-bottom: 70px;
+    align-items: center;
+}
+#versoes #modelos h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#versoes #modelos h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#versoes #modelos ul{
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+#versoes #modelos ul li{
+    margin-bottom: 10px;
+}
+#versoes #modelos .but-comprar{
+    display: block;
+    max-width: 150px;
+    background-color: var(--color-1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--color-4);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s linear;
+    margin-bottom: 20px;
+}
+#versoes #modelos .but-comprar:hover{
+    box-shadow: 0 0 10px 3px rgba(0, 113, 227, .8);
+}
+#versoes #modelos .but-saiba-mais{
+    color: var(--color-1);
+    text-decoration: none;
+}
+#versoes #modelos .bur-saiba-mais:hover{
+    text-decoration: underline;
+}
+#versoes #modelos .but-saiba-mais::after{
+    content: "\276f";
+    margin-left: 5px;
+}
+#fotos{
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 62px 0;
+}
+#fotos #galeria-fotos{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+#fotos #galeria-fotos img{
+    display: block;
+    width: 80%;
+    transition: all 0.3s linear;
+}
+#fotos #galeria-fotos img:hover{
+    transform: scale(1.1);  
+}
+#rodape{
+    padding: 30px;
+    text-align: center;
+    font-size: 15px;
+}
+#rodape{
+    margin-bottom: 10px;
+}
+#rodape a{
+    color: var(--color-1);
+    text-decoration: none;
+}
+#rodape a:hover{
+    text-decoration: underline;
+}
+#rodape .redes{
+    font-size: 25px;
+}
